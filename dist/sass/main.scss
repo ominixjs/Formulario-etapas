@@ -61,4 +61,36 @@ ul {
   color: #f0db4f;
 }
 
+hr {
+  border: 0;
+  width: 400px;
+  height: 1px;
+  background-color: colors.$border-color;
+  margin-block: 1rem;
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+
+  &::after {
+    content: "ou";
+    height: max-content;
+    padding-inline: 0.4rem;
+    display: flex;
+    font-size: 14px;
+    font-kerning: 500;
+    color: colors.$border-color;
+    background-color: colors.$bg;
+    transform: translateY(-50%);
+  }
+}
+
+p.link-register {
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+  & a:hover {
+    text-decoration: underline;
+  }
+}
+
 // sass --watch dist/sass/global.scss src/css/global.css

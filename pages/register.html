@@ -27,10 +27,10 @@
     <main class="container">
       <form action="#" class="form-register" id="form_register">
         <div class="list-steps-progress">
-          <div class="step1-completed">1</div>
-          <div class="step2-completed">2</div>
-          <div class="step3-completed">3</div>
-          <div class="step4-completed">4</div>
+          <div class="circle-step step1-completed">1</div>
+          <div class="circle-step step2-completed">2</div>
+          <div class="circle-step step3-completed">3</div>
+          <div class="circle-step step4-completed">4</div>
         </div>
 
         <div class="steps-flex">
@@ -49,11 +49,17 @@
             <input type="text" name="phone" class="input-data" id="phone" />
 
             <div class="flex-buttons">
-              <button type="button" class="button-progress">Próximo</button>
-              <button type="button" class="button-cancel">Cancelar</button>
+              <button type="submit" class="button-progress" id="button_next">
+                Próximo
+              </button>
+              <a href="../index.html"
+                ><button type="button" class="button-cancel">
+                  Cancelar
+                </button></a
+              >
             </div>
           </div>
-          <div class="step step2">
+          <div class="step step2 hide">
             <label for="verifi-code">Insira o codigo:</label>
             <input
               type="text"
@@ -64,11 +70,17 @@
             />
 
             <div class="flex-buttons">
-              <button type="button" class="button-progress">Próximo</button>
-              <button type="button" class="button-cancel">Cancelar</button>
+              <button type="button" class="button-progress" id="button_next">
+                Próximo
+              </button>
+              <a href="../index.html"
+                ><button type="button" class="button-cancel">
+                  Cancelar
+                </button></a
+              >
             </div>
           </div>
-          <div class="step step3">
+          <div class="step step3 hide">
             <label for="verifi-code">Insira o codigo:</label>
             <input
               type="text"
@@ -79,12 +91,39 @@
             />
 
             <div class="flex-buttons">
-              <button type="button" class="button-success">Finalizar</button>
+              <button type="button" class="button-success" id="button_next">
+                Finalizar
+              </button>
+              <button type="button" class="button-cancel">Cancelar</button>
+            </div>
+          </div>
+          <div class="step step4 hide">
+            <label for="verifi-code">Insira o codigo:</label>
+            <input
+              type="text"
+              name="verifi-code"
+              class="input-data"
+              id="verifi-code"
+              placeholder="xxx xxx"
+            />
+
+            <div class="flex-buttons">
+              <button type="button" class="button-success" id="button_next">
+                Finalizar
+              </button>
               <button type="button" class="button-cancel">Cancelar</button>
             </div>
           </div>
         </div>
+        <hr />
+
+        <p class="link-register">
+          Se você já possui acesso, então
+          <a href="pages/register.html">Acessar minha conta</a>
+        </p>
       </form>
     </main>
+
+    <script src="../src/register.js"></script>
   </body>
 </html>
