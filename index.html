@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+
+    <link rel="stylesheet" href="src/css/global.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="#" class="myNameTag">Ominixjs</a>
+
+        <ul class="navbar-list-social">
+          <li>
+            <a href="#"><i class="fi fi-brands-github"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fi fi-brands-instagram"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      <form action="#" class="form" id="frm">
+        <h1>Olá, Bem vindo</h1>
+
+        <label for="user">Usuário:</label>
+        <input
+          type="text"
+          name="user"
+          id="user"
+          class="input-data"
+          placeholder="Usuário"
+        />
+
+        <label for="passw">Senha:</label>
+        <input
+          type="text"
+          name="passw"
+          id="passw"
+          class="input-data"
+          placeholder="Senha"
+        />
+
+        <div class="check-area" style="margin-top: 0.5rem">
+          <input
+            type="checkbox"
+            name="remember"
+            class="input-checkbox"
+            id="remember"
+          />
+          <label for="remember">Manter acesso?</label>
+        </div>
+        <div class="check-area">
+          <input
+            type="checkbox"
+            name="terms"
+            class="input-checkbox"
+            id="terms"
+          />
+          <label for="terms">Aceitar os Termos de Uso*</label>
+        </div>
+
+        <button type="submit" class="button-success">Entrar</button>
+
+        <hr />
+
+        <p class="link-register">
+          Faça seu cadastro <a href="pages/register.html">Meu cadastro</a>
+        </p>
+      </form>
+    </main>
+  </body>
+</html>

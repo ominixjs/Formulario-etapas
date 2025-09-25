@@ -1,0 +1,79 @@
+@use "colors";
+
+.form-register {
+  width: 600px;
+  height: 600px;
+  max-height: 600px;
+  margin: 0 auto;
+  border: 1px solid colors.$border-color;
+
+  & .list-steps-progress {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+
+    & div {
+      width: 3rem;
+      height: 3rem;
+      background-color: colors.$border-color;
+      border-radius: 50%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      font-weight: 400;
+      color: colors.$color-prf;
+
+      &:not(:last-child)::after {
+        content: "";
+        width: calc(500px / 4);
+        height: 1px;
+        background-color: #dddddd;
+        display: block;
+        position: absolute;
+        z-index: -1;
+        right: calc(-400px / 4);
+      }
+    }
+  }
+
+  & h2 {
+    font-size: 1.4em;
+    width: 100%;
+  }
+
+  & .steps-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    overflow: hidden;
+
+    & .step {
+      width: 400px;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+
+      & label {
+        margin-top: 0.5rem;
+        font-size: 14px;
+      }
+
+      & .flex-buttons {
+        display: flex;
+        gap: 1rem;
+      }
+    }
+
+    & .step2,
+    & .step3 {
+      display: none;
+    }
+  }
+}

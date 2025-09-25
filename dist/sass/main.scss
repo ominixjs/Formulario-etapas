@@ -1,0 +1,64 @@
+@use "colors";
+
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Poppins:ital,wght@0,300;0,400;1,300;1,400&family=Work+Sans:wght@600&display=swap");
+@import url("https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css");
+
+*,
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  font-family: "Poppins", sans-serif;
+}
+
+input,
+button {
+  outline: 0;
+}
+
+body {
+  font-size: 1em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Work Sans", sans-serif;
+  color: colors.$color-title;
+  letter-spacing: -1px;
+}
+
+a,
+p,
+li,
+button,
+input,
+label {
+  font-weight: 400;
+  color: colors.$color-prf;
+  // letter-spacing: -0.3px;
+  text-decoration: none;
+}
+
+p a {
+  color: #00a6fb;
+}
+
+i {
+  display: flex;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.myNameTag {
+  font-family: "Fira Code", serif;
+  font-weight: 400;
+  letter-spacing: -1px;
+  color: #f0db4f;
+}
+
+// sass --watch dist/sass/global.scss src/css/global.css

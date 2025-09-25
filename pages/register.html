@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+
+    <link rel="stylesheet" href="../src/css/global.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="#" class="myNameTag">Ominixjs</a>
+
+        <ul class="navbar-list-social">
+          <li>
+            <a href="#"><i class="fi fi-brands-github"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fi fi-brands-instagram"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--  -->
+    <main class="container">
+      <form action="#" class="form-register" id="form_register">
+        <div class="list-steps-progress">
+          <div class="step1-completed">1</div>
+          <div class="step2-completed">2</div>
+          <div class="step3-completed">3</div>
+          <div class="step4-completed">4</div>
+        </div>
+
+        <div class="steps-flex">
+          <div class="step step1">
+            <h2>Complete os Campos</h2>
+            <label for="full_name">Nome Completo:*</label>
+            <input
+              type="text"
+              name="full_name"
+              class="input-data"
+              id="full_name"
+            />
+            <label for="email">Email:*</label>
+            <input type="text" name="email" class="input-data" id="email" />
+            <label for="phone">Telefone:</label>
+            <input type="text" name="phone" class="input-data" id="phone" />
+
+            <div class="flex-buttons">
+              <button type="button" class="button-progress">Próximo</button>
+              <button type="button" class="button-cancel">Cancelar</button>
+            </div>
+          </div>
+          <div class="step step2">
+            <label for="verifi-code">Insira o codigo:</label>
+            <input
+              type="text"
+              name="verifi-code"
+              class="input-data"
+              id="verifi-code"
+              placeholder="xxx xxx"
+            />
+
+            <div class="flex-buttons">
+              <button type="button" class="button-progress">Próximo</button>
+              <button type="button" class="button-cancel">Cancelar</button>
+            </div>
+          </div>
+          <div class="step step3">
+            <label for="verifi-code">Insira o codigo:</label>
+            <input
+              type="text"
+              name="verifi-code"
+              class="input-data"
+              id="verifi-code"
+              placeholder="xxx xxx"
+            />
+
+            <div class="flex-buttons">
+              <button type="button" class="button-success">Finalizar</button>
+              <button type="button" class="button-cancel">Cancelar</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

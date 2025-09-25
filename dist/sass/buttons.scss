@@ -1,0 +1,36 @@
+@use "colors";
+
+@mixin button-default($bg-color, $outl-color) {
+  padding: 0.3rem 2rem;
+  margin-block: 1rem;
+  font-size: 14px;
+  font-weight: 400;
+  border: 0;
+  outline: 3px solid transparent;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  color: colors.$bg;
+  background-color: $bg-color;
+
+  transition: outline-color 300ms;
+
+  &:hover {
+    outline-color: $outl-color;
+  }
+
+  &::placeholder {
+    color: $bg-color;
+  }
+}
+
+.button-success {
+  @include button-default(colors.$color-success, colors.$color-success-trans);
+}
+
+.button-progress {
+  @include button-default(colors.$color-progress, colors.$color-progress-trans);
+}
+
+.button-cancel {
+  @include button-default(colors.$color-cancel, colors.$color-cancel-trans);
+}
