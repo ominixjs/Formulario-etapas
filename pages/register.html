@@ -42,12 +42,38 @@
               name="full_name"
               class="input-data"
               id="full_name"
+              value="Carlos"
+              reuired
             />
             <label for="email">Email:*</label>
-            <input type="text" name="email" class="input-data" id="email" />
+            <input
+              type="text"
+              name="email"
+              class="input-data"
+              id="email"
+              value="e@g.com"
+              required
+            />
             <label for="phone">Telefone:</label>
             <input type="text" name="phone" class="input-data" id="phone" />
-
+            <div class="check-area" style="margin-top: 0.5rem">
+              <input
+                type="radio"
+                name="radio-genero"
+                class="input-radio"
+                id="female"
+              />
+              <label for="female">Feminino</label>
+            </div>
+            <div class="check-area">
+              <input
+                type="radio"
+                name="radio-genero"
+                class="input-radio"
+                id="male"
+              />
+              <label for="male">Masculino</label>
+            </div>
             <div class="flex-buttons">
               <button type="submit" class="button-progress" id="button_next">
                 Próximo
@@ -60,17 +86,22 @@
             </div>
           </div>
           <div class="step step2 hide">
-            <label for="verifi-code">Insira o codigo:</label>
+            <label for="verifi_code">Insira o codigo:</label>
             <input
               type="text"
               name="verifi-code"
               class="input-data"
-              id="verifi-code"
+              id="verifi_code"
+              maxlength="7"
               placeholder="xxx xxx"
             />
+            <p class="txt-help">
+              ! Verfique sua caixa de mensagem de
+              <span>Email</span>
+            </p>
 
             <div class="flex-buttons">
-              <button type="button" class="button-progress" id="button_next">
+              <button type="submit" class="button-progress" id="button_next">
                 Próximo
               </button>
               <a href="../index.html"
@@ -81,17 +112,18 @@
             </div>
           </div>
           <div class="step step3 hide">
-            <label for="verifi-code">Insira o codigo:</label>
+            <label for="cpf">CPF:</label>
             <input
               type="text"
-              name="verifi-code"
+              name="cpf"
               class="input-data"
-              id="verifi-code"
-              placeholder="xxx xxx"
+              id="cpf"
+              maxlength="14"
+              placeholder="___.___.___-__"
             />
 
             <div class="flex-buttons">
-              <button type="button" class="button-success" id="button_next">
+              <button type="submit" class="button-progress" id="button_next">
                 Finalizar
               </button>
               <button type="button" class="button-cancel">Cancelar</button>
@@ -108,13 +140,23 @@
             />
 
             <div class="flex-buttons">
-              <button type="button" class="button-success" id="button_next">
+              <button type="submit" class="button-success" id="button_next">
                 Finalizar
               </button>
               <button type="button" class="button-cancel">Cancelar</button>
             </div>
           </div>
         </div>
+        <p
+          id="txt_erros"
+          style="
+            color: red;
+            font-size: 14px;
+            text-align: left;
+            width: 100%;
+            padding-inline: 100px;
+          "
+        ></p>
         <hr />
 
         <p class="link-register">

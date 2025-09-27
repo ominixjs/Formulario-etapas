@@ -88,13 +88,20 @@ p.link-register a:hover {
   text-decoration: underline;
 }
 
-.border, .input-checkbox, .input-data {
+p.txt-help {
+  font-size: 12px;
+  margin-top: 0.5rem;
+  color: #999999;
+  font-weight: 300;
+}
+
+.border, .input-radio, .input-checkbox, .input-data {
   cursor: pointer;
   border: 1px solid #cccccc;
   outline: 3px solid transparent;
   transition: border-color 300ms, outline-color 300ms;
 }
-.border:focus, .input-checkbox:focus, .input-data:focus {
+.border:focus, .input-radio:focus, .input-checkbox:focus, .input-data:focus {
   border-color: #00a6fb;
   outline-color: rgba(0, 167, 251, 0.4);
 }
@@ -113,6 +120,23 @@ p.link-register a:hover {
 }
 .input-checkbox:checked {
   border-color: #00a6fb;
+}
+
+.input-radio {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+}
+.input-radio:checked {
+  border-color: #00a6fb;
+}
+
+.check-area {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-block: 0.2rem;
 }
 
 .button-success {
@@ -223,14 +247,6 @@ main.container {
   font-size: 14px;
   margin-top: 0.5rem;
 }
-.form .check-area {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.form .check-area label {
-  font-size: 14px;
-}
 .form button.button-sucess {
   display: block;
   margin: 1rem auto;
@@ -238,8 +254,8 @@ main.container {
 
 .form-register {
   width: 600px;
-  height: 600px;
-  max-height: 600px;
+  height: 650px;
+  max-height: 650px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -315,6 +331,10 @@ main.container {
 .form-register .steps-flex .step .flex-buttons {
   display: flex;
   gap: 1rem;
+}
+.form-register .steps-flex .step .check-area label {
+  margin-top: 0;
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=global.css.map */

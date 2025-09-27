@@ -24,9 +24,30 @@
   width: 1rem;
   height: 1rem;
   border-radius: 0.2rem;
+
   @extend .border;
 
   &:checked {
     border-color: colors.$color-progress;
   }
+}
+
+.input-radio {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+
+  @extend .border;
+
+  &:checked {
+    border-color: colors.$color-progress;
+  }
+}
+
+.check-area {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-block: 0.2rem;
 }

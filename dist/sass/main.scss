@@ -93,4 +93,11 @@ p.link-register {
   }
 }
 
+p.txt-help {
+  font-size: 12px;
+  margin-top: 0.5rem;
+  color: #999999;
+  font-weight: 300;
+}
+
 // sass --watch dist/sass/global.scss src/css/global.css

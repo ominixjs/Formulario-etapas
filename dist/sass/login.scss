@@ -55,16 +55,6 @@ main.container {
     margin-top: 0.5rem;
   }
 
-  & .check-area {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-
-    & label {
-      font-size: 14px;
-    }
-  }
-
   & button.button-sucess {
     display: block;
     margin: 1rem auto;
