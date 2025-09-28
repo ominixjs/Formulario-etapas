@@ -34,7 +34,7 @@
         </div>
 
         <div class="steps-flex">
-          <div class="step step1">
+          <div class="step">
             <h2>Complete os Campos</h2>
             <label for="full_name">Nome Completo:*</label>
             <input
@@ -55,7 +55,13 @@
               required
             />
             <label for="phone">Telefone:</label>
-            <input type="text" name="phone" class="input-data" id="phone" />
+            <input
+              type="text"
+              name="phone"
+              class="input-data"
+              id="phone"
+              maxlength="16"
+            />
             <div class="check-area" style="margin-top: 0.5rem">
               <input
                 type="radio"
@@ -79,13 +85,11 @@
                 Próximo
               </button>
               <a href="../index.html"
-                ><button type="button" class="button-cancel">
-                  Cancelar
-                </button></a
+                ><button type="button" class="button-cancel">Voltar</button></a
               >
             </div>
           </div>
-          <div class="step step2 hide">
+          <div class="step hide">
             <label for="verifi_code">Insira o codigo:</label>
             <input
               type="text"
@@ -104,14 +108,12 @@
               <button type="submit" class="button-progress" id="button_next">
                 Próximo
               </button>
-              <a href="../index.html"
-                ><button type="button" class="button-cancel">
-                  Cancelar
-                </button></a
-              >
+              <button type="button" class="button-cancel" id="btn_back">
+                Voltar
+              </button>
             </div>
           </div>
-          <div class="step step3 hide">
+          <div class="step hide">
             <label for="cpf">CPF:</label>
             <input
               type="text"
@@ -126,24 +128,50 @@
               <button type="submit" class="button-progress" id="button_next">
                 Finalizar
               </button>
-              <button type="button" class="button-cancel">Cancelar</button>
+              <button type="button" class="button-cancel" id="btn_back">
+                Voltar
+              </button>
             </div>
           </div>
-          <div class="step step4 hide">
-            <label for="verifi-code">Insira o codigo:</label>
+          <div class="step hide">
+            <label for="cep">CEP:*</label>
             <input
               type="text"
-              name="verifi-code"
+              name="cep"
               class="input-data"
-              id="verifi-code"
-              placeholder="xxx xxx"
+              id="cep"
+              maxlength="8"
             />
+
+            <label for="state">Estado:*</label>
+            <input type="text" name="state" class="input-data" id="state" />
+
+            <label for="city">Cidade:*</label>
+            <input type="text" name="city" class="input-data" id="city" />
 
             <div class="flex-buttons">
               <button type="submit" class="button-success" id="button_next">
                 Finalizar
               </button>
-              <button type="button" class="button-cancel">Cancelar</button>
+              <button type="button" class="button-cancel" id="btn_back">
+                Voltar
+              </button>
+            </div>
+          </div>
+          <div class="step hide">
+            <div class="container">
+              <h2>Conta criada com <span>sucesso!</span></h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. In
+                obcaecati modi accusantium, ea aut, tempore id architecto libero
+                quam quis possimus delectus unde iure quod consectetur natus
+                itaque ullam non!
+              </p>
+              <a href="../index.html">
+                <button type="button" class="button-progress">
+                  Acessar Conta
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -161,7 +189,7 @@
 
         <p class="link-register">
           Se você já possui acesso, então
-          <a href="pages/register.html">Acessar minha conta</a>
+          <a href="../index.html">Acessar minha conta</a>
         </p>
       </form>
     </main>

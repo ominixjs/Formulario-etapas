@@ -50,4 +50,8 @@
   align-items: center;
   gap: 0.5rem;
   padding-block: 0.2rem;
+
+  & label {
+    font-size: 12px;
+  }
 }

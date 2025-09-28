@@ -138,6 +138,9 @@ p.txt-help {
   gap: 0.5rem;
   padding-block: 0.2rem;
 }
+.check-area label {
+  font-size: 12px;
+}
 
 .button-success {
   padding: 0.3rem 2rem;
@@ -244,7 +247,7 @@ main.container {
 .form > label {
   display: block;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   margin-top: 0.5rem;
 }
 .form button.button-sucess {
@@ -326,7 +329,7 @@ main.container {
 }
 .form-register .steps-flex .step label {
   margin-top: 0.5rem;
-  font-size: 14px;
+  font-size: 12px;
 }
 .form-register .steps-flex .step .flex-buttons {
   display: flex;
@@ -334,7 +337,20 @@ main.container {
 }
 .form-register .steps-flex .step .check-area label {
   margin-top: 0;
-  font-size: 14px;
+}
+.form-register div.container {
+  text-align: center;
+}
+.form-register div.container h2 {
+  font-size: 2.5em;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+.form-register div.container h2 span {
+  color: #67b99a;
+}
+.form-register div.container p {
+  text-align: justify;
 }
 
 /*# sourceMappingURL=global.css.map */
