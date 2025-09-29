@@ -19,6 +19,7 @@ button {
 
 body {
   font-size: 1em;
+  position: relative;
 }
 
 h1,
@@ -100,4 +101,19 @@ p.txt-help {
   font-weight: 300;
 }
 
-// sass --watch dist/sass/global.scss src/css/global.css
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  & p {
+    font-size: 14px;
+    font-weight: 400;
+    & a {
+      color: colors.$color-success;
+    }
+  }
+}

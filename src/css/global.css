@@ -16,6 +16,7 @@ button {
 
 body {
   font-size: 1em;
+  position: relative;
 }
 
 h1,
@@ -34,7 +35,7 @@ button,
 input,
 label {
   font-weight: 400;
-  color: #333333;
+  color: #616161;
   text-decoration: none;
 }
 
@@ -95,11 +96,43 @@ p.txt-help {
   font-weight: 300;
 }
 
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+footer p {
+  font-size: 14px;
+  font-weight: 400;
+}
+footer p a {
+  color: #67b99a;
+}
+
 .border, .input-radio, .input-checkbox, .input-data {
   cursor: pointer;
   border: 1px solid #cccccc;
   outline: 3px solid transparent;
   transition: border-color 300ms, outline-color 300ms;
+  display: grid;
+  place-content: center;
+}
+.border::after, .input-radio::after, .input-checkbox::after, .input-data::after {
+  content: "";
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 0.1rem;
+  display: block;
+}
+.border:checked, .input-radio:checked, .input-checkbox:checked, .input-data:checked {
+  border-color: #00a6fb;
+}
+.border:checked::after, .input-radio:checked::after, .input-checkbox:checked::after, .input-data:checked::after {
+  background-color: #00a6fb;
 }
 .border:focus, .input-radio:focus, .input-checkbox:focus, .input-data:focus {
   border-color: #00a6fb;
@@ -118,9 +151,6 @@ p.txt-help {
   height: 1rem;
   border-radius: 0.2rem;
 }
-.input-checkbox:checked {
-  border-color: #00a6fb;
-}
 
 .input-radio {
   appearance: none;
@@ -128,8 +158,9 @@ p.txt-help {
   height: 1rem;
   border-radius: 50%;
 }
-.input-radio:checked {
-  border-color: #00a6fb;
+.input-radio::after {
+  content: "";
+  border-radius: 50%;
 }
 
 .check-area {
@@ -228,7 +259,7 @@ body {
 main.container {
   display: flex;
   align-items: center;
-  height: calc(100vh - 41px);
+  height: calc(100vh - 61px);
 }
 
 .form {
@@ -284,7 +315,7 @@ main.container {
   align-items: center;
   font-size: 18px;
   font-weight: 400;
-  color: #333333;
+  color: #616161;
 }
 .form-register .list-steps-progress div.circle-step:not(:last-child)::after {
   content: "";
@@ -342,7 +373,7 @@ main.container {
   text-align: center;
 }
 .form-register div.container h2 {
-  font-size: 2.5em;
+  font-size: 2em;
   line-height: 1;
   margin-bottom: 1rem;
 }

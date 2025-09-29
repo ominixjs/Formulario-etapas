@@ -5,6 +5,23 @@
   border: 1px solid colors.$border-color;
   outline: 3px solid transparent;
   transition: border-color 300ms, outline-color 300ms;
+  display: grid;
+  place-content: center;
+
+  &::after {
+    content: "";
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 0.1rem;
+    display: block;
+  }
+
+  &:checked {
+    border-color: colors.$color-progress;
+    &::after {
+      background-color: colors.$color-progress;
+    }
+  }
 
   &:focus {
     border-color: colors.$color-progress;
@@ -26,10 +43,6 @@
   border-radius: 0.2rem;
 
   @extend .border;
-
-  &:checked {
-    border-color: colors.$color-progress;
-  }
 }
 
 .input-radio {
@@ -40,8 +53,9 @@
 
   @extend .border;
 
-  &:checked {
-    border-color: colors.$color-progress;
+  &::after {
+    content: "";
+    border-radius: 50%;
   }
 }
 
